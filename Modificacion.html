@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modificacion</title>
+    <link rel="stylesheet" href="./css/modificacion.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./img/295128.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Contact with us</h2>
+      </div>
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">First Name</label>
+          <input type="text" id="username" placeholder="Antonio Lorenzo" />
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <!--nuevo-->
+        <div class="form-control">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Cano Jimenez" />
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="acanjim2704@g.educaand.es"
+          />
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <!--nuevo-->
+        <div class="form-control">
+          <label for="phone">Phone</label>
+          <!--comentar a pilar-->
+          <input type="text" id="phone" placeholder="+34667565319" />
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <!--nuevo-->
+        <div class="form-control">
+          <label for="city">City</label>
+          <select name="city_selected" class="form-select" id="city">
+            <option value="0">Please select your city</option>
+            <option>Albacete</option>
+            <option>A coruña</option>
+            <option>Alicante</option>
+            <option>Almería</option>
+            <option>Avilés</option>
+            <option>Badajoz</option>
+            <option>Barcelona</option>
+            <option>Bilbao</option>
+            <option>Burgos</option>
+            <option>Cáceres</option>
+            <option>Cádiz</option>
+            <option>Cartagena</option>
+            <option>Ciudad Real</option>
+            <option>Córdoba</option>
+            <option>Cuenca</option>
+            <option>Elche</option>
+            <option>El Puerto de Santa María</option>
+            <option>Fuengirola</option>
+            <option>Girona</option>
+            <option>Granada</option>
+            <option>Guadalajara</option>
+            <option>Huelva</option>
+            <option>Huesca</option>
+            <option>Jaén</option>
+            <option>Jerez de la Frontera</option>
+            <option>La Coruña</option>
+            <option>Las Palmas de Gran Canaria</option>
+            <option>León</option>
+            <option>Lérida</option>
+            <option>Logroño</option>
+            <option>Lugo</option>
+            <option>Madrid</option>
+            <option>Málaga</option>
+            <option>Mallorca</option>
+            <option>Marbella</option>
+            <option>Mérida</option>
+            <option>Murcia</option>
+            <option>Oviedo</option>
+            <option>Palencia</option>
+            <option>Palma de Mallorca</option>
+            <option>Pamplona</option>
+            <option>Pontevedra</option>
+            <option>Pozuelo de Alarcón</option>
+            <option>Salamanca</option>
+            <option>Santander</option>
+            <option>San Sebastián</option>
+            <option>Santa Cruz de Tenerife</option>
+            <option>Segovia</option>
+            <option>Sevilla</option>
+            <option>Soria</option>
+            <option>Tarragona</option>
+            <option>Teruel</option>
+            <option>Toledo</option>
+            <option>Valencia</option>
+            <option>Valladolid</option>
+            <option>Vigo</option>
+            <option>Vitoria-Gasteiz</option>
+            <option>Zamora</option>
+          </select>
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <!--nuevo-->
+        <div class="form-control">
+          <label for="postalCode">Postal Code</label>
+          <input
+            type="text"
+            id="postalCode"
+            maxlength="5"
+            placeholder="29590"
+          />
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <p>Choose your gender:</p>
+        <div class="grupo">
+          <input type="radio" name="gender" value="1" />
+          <label for="male">Male</label><br />
+          <input type="radio" name="gender" value="2" />
+          <label for="female">Female</label><br />
+          <input type="radio" name="gender" value="3" />
+          <label for="other">Other</label><br />
+
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="grupo">
+          <div class="form-text text-danger" id="">
+            Do you want to keep in contact?
+          </div>
+          <br />
+          <input type="checkbox" name="keepInformed" id="keepInformed" />
+          <label for="infoCheckbox">Yes i want to be in contact</label><br />
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <!--añadir gender y recibir-->
+        <button>Submit</button>
+      </form>
+    </div>
+    <script src="./js/modificacion.js"></script>
+  </body>
+</html>

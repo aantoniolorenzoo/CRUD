@@ -1,0 +1,233 @@
+/******************************************************/
+/*      Hoja de estilo de login.html                 */
+/*      autor: antonio lorenzo cano jimenez         */
+/*                 version: 1.0                    */
+/*              fecha: 27/01/2024                 */
+/*************************************************/
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#2c1753, #48285b);
+}
+
+.loginBox {
+  width: 80%; /* Ajuste el ancho a un valor relativo */
+  max-width: 400px; /* Máximo ancho */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin-top: 90px;
+}
+
+.loginBox h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.loginBox .user-box {
+  position: relative;
+}
+
+.loginBox .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.loginBox .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+  .loginBox {
+    width: 90%; /* Ajustar el ancho para dispositivos más pequeños */
+  }
+}
+
+#buttonAnim {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background-color: #03f490;
+
+  border-radius: 5px;
+}
+
+#buttonAnim:hover {
+  background: #03f4a0;
+  color: #000000;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #03f490, 0 0 25px #03f490, 0 0 50px #03f490,
+    0 0 100px #03f490;
+}
+
+#buttonAnim span {
+  position: absolute;
+  display: block;
+}
+
+#buttonAnim span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03f490);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+#buttonAnim span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+#buttonAnim span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+#buttonAnim span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.user-box {
+  position: relative;
+  margin-bottom: 30px; /* Ajuste para separar los campos */
+}
+
+.user-box label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.user-box input {
+  border: 2px solid #0e0d0d;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.user-box.success input {
+  border-color: #2ecc71;
+}
+
+.user-box.error input {
+  border-color: #e74c3c;
+}
+
+.user-box i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.user-box.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.user-box.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.user-box small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.user-box.error small {
+  visibility: visible;
+}
